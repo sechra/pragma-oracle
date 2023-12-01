@@ -81,7 +81,7 @@ mod Account {
                             entry_point_selector: call.selector,
                             calldata: call.calldata.span()
                         )
-                            .unwrap_syscall();
+                            .unwrap_syscall(0);
                         result.append(res);
                     },
                     Option::None(()) => {
